@@ -1,0 +1,29 @@
+.new-tweet textarea{
+  background-color: #f4f1ec;
+  color: #545149;
+  width: 100%;
+  border: none;
+  border-bottom: 4px solid #545149;
+  resize: none;
+  outline: 0;
+}
+
+.new-tweet textarea::-webkit-input-placeholder {
+  color: #545149;
+  opacity: 1;
+  font-size: 24px;
+  font-weight: 700;
+  }
+
+.new-tweet span {
+  float: right;
+  font-family: 'Bungee', sans-serif;
+}
+
+.new-tweet input {
+  background-color: #4056A1;
+  border: none;
+  color: #FFFFFF;
+  font-family: 'Bungee', sans-serif;
+  font-size: 20px;
+}
