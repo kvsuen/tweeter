@@ -1,0 +1,14 @@
+header {
+  height: 360px;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  background-color: #00abd6;
+  background-image: url("https://www.transparenttextures.com/patterns/exclusive-paper.png");
+  color: #ffffff;
+  margin-top: 100px;
+}
+
+header span.light {
+  font-weight: lighter;
+}
