@@ -68,42 +68,54 @@ $(document).ready(function () {
     //server expects query string
     const formData = $(this).children('form').serialize();
 
-    $.ajax({
-      type: 'POST', 
-      url: '/tweets', 
-      data: formData,
-    })
-      .success(function() {
-        $('.new-tweet').find('textarea').val('');
-        $('.new-tweet').find('.counter').text(140);
-        // update page when using posts tweet
-        // do another ajax request to get updated tweet data and prepend new tweet to the page
-        // this is a smoother effect compared to $('article').remove() and then loadTweets()
-        $.ajax({
-          type: 'GET',
-          url: '/tweets'
-        })
-          .success(function(data) {
-            $("#tweets-container").prepend($('<article>').addClass('tweet').html(
-              `
-              <header>
-                <img src=${data[0].user.avatars}>
-                <span>${data[0].user.name}</span>
-                <aside>${data[0].user.handle}</aside>
-              </header>
-              <div>${data[0].content.text}</div>
-              <footer>
-                <p>${getTimeSincePost(data[0].created_at)}</p>
-                <aside>
-                  <button>🚩</button> 
-                  <button>🌀</button>  
-                  <button>❤</button>
-                </aside>
-              </footer>
-              `
-            ));
-          });
-      });
+    if (formData.length === 5) {
+      alert('Empty tweet. Please enter a message!');
+    } else if ( formData.length > 145) {
+      alert('Tweet is too long!');
+    } else {
+      $.ajax({
+        type: 'POST', 
+        url: '/tweets', 
+        data: formData,
+      })
+        .success(function() {
+          $('.new-tweet').find('textarea').val('');
+          $('.new-tweet').find('.counter').text(140);
+          // update page when using posts tweet
+          // do another ajax request to get updated tweet data and prepend new tweet to the page
+          // this is a smoother effect compared to $('article').remove() and then loadTweets()
+          $.ajax({
+            type: 'GET',
+            url: '/tweets'
+          })
+            .success(function(data) {
+              $("#tweets-container").prepend($('<article>').addClass('tweet').html(
+                `
+                <header>
+                  <img src=${data[0].user.avatars}>
+                  <span>${data[0].user.name}</span>
+                  <aside>${data[0].user.handle}</aside>
+                </header>
+                <div>${data[0].content.text}</div>
+                <footer>
+                  <p>${getTimeSincePost(data[0].created_at)}</p>
+                  <aside>
+                    <button>🚩</button> 
+                    <button>🌀</button>  
+                    <button>❤</button>
+                  </aside>
+                </footer>
+                `
+              ));
+            });
+        });
+    }
+  });
+
+  $('nav aside').click(function() {
+    $('.new-tweet').slideToggle(400, function() {
+      $('.new-tweet').find('textarea').focus();
+    });
   });
 
 });
