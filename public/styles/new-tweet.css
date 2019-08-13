@@ -1,3 +1,7 @@
+.new-tweet {
+  margin-top: 1em;
+}
+
 .new-tweet textarea{
   background-color: #f4f1ec;
   color: #545149;
