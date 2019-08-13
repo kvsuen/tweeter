@@ -1,4 +1,4 @@
-header {
+body > header {
   height: 360px;
   text-align: center;
   width: 100%;
@@ -9,6 +9,6 @@ header {
   margin-top: 100px;
 }
 
-header span.light {
+body > header span.light {
   font-weight: lighter;
 }
