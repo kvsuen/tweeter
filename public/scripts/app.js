@@ -56,10 +56,32 @@ $(document).ready(function () {
       data: formData,
     })
       .success(function() {
-        $('article').remove();
         $('.new-tweet').find('textarea').val('');
         $('.new-tweet').find('.counter').text(140);
-        loadTweets();
+        $.ajax({
+          type: 'GET',
+          url: '/tweets'
+        })
+          .success(function(data) {
+            $("#tweets-container").prepend($('<article>').addClass('tweet').html(
+              `
+              <header>
+                <img src=${data[0].user.avatars}>
+                <span>${data[0].user.name}</span>
+                <aside>${data[0].user.handle}</aside>
+              </header>
+              <div>${data[0].content.text}</div>
+              <footer>
+                <p>${Math.floor((Date.now() - data[0].created_at) / 1000 / 60 / 60 / 24)} days ago</p>
+                <aside>
+                  <button>🚩</button> 
+                  <button>🌀</button>  
+                  <button>❤</button>
+                </aside>
+              </footer>
+              `
+            ));
+          });
       });
   });
 
