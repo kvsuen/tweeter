@@ -20,3 +20,38 @@ nav div {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 22px;
 }
+
+.arrow {
+  position: relative;
+  top: 1.45em;
+  right: 50%;
+}
+
+.arrow span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2.5px solid #84CEEB;
+  border-right: 2.5px solid #84CEEB;
+  transform: rotate(45deg);
+  margin: 0px;
+  animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+@keyframes animate {
+  0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(-7px,-7px);
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(0px,0px);
+  }
+}
