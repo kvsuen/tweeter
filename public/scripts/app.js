@@ -54,7 +54,13 @@ $(document).ready(function () {
       type: 'POST', 
       url: '/tweets', 
       data: formData,
-    });
+    })
+      .success(function() {
+        $('article').remove();
+        $('.new-tweet').find('textarea').val('');
+        $('.new-tweet').find('.counter').text(140);
+        loadTweets();
+      });
   });
 
 });
