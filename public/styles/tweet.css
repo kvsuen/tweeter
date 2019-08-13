@@ -35,7 +35,7 @@ article.tweet:hover header aside{
   display: block
 }
 
-article.tweet section {
+article.tweet div {
   width: 95%;
   margin: auto;
   padding-top: 0.5em;
