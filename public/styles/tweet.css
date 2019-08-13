@@ -1,10 +1,10 @@
 article.tweet {
-  border: 4px solid #545149;
+  border: 2px solid #545149;
   margin: 2em 0em;
 }
 
 article.tweet:hover {
-  box-shadow: 8px 8px #c8cee4;
+  box-shadow: 5px 5px #c8cee4;
 }
 
 article.tweet header {
@@ -45,7 +45,7 @@ article.tweet div {
 article.tweet footer {
   width: 98%;
   margin: auto;
-  border-top: 4px solid #545149;
+  border-top: 2.5px solid #545149;
 }
 
 article.tweet footer p {
