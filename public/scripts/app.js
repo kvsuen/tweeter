@@ -3,6 +3,24 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
+const getTimeSincePost = function(initialTime) {
+  const timeInSeconds = (Date.now() - initialTime) / 1000;
+  const timeInMinutes = timeInSeconds / 60;
+  const timeInHours = timeInMinutes / 60;
+  const timeInDays = timeInHours / 24;
+
+  if (timeInSeconds < 60) {
+    return `${Math.floor(timeInSeconds)} seconds ago`;
+  } else if (timeInMinutes < 60) {
+    return `${Math.floor(timeInMinutes)} minutes ago`;
+  } else if (timeInHours < 24) {
+    return `${Math.floor(timeInHours)} hours ago`;
+  } else {
+    return `${Math.floor(timeInDays)} days ago`;
+  }
+};
+
 $(document).ready(function () {
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
@@ -20,7 +38,7 @@ $(document).ready(function () {
         </header>
         <div>${tweet.content.text}</div>
         <footer>
-          <p>${Math.floor((Date.now() - tweet.created_at) / 1000 / 60 / 60 / 24)} days ago</p>
+          <p>${getTimeSincePost(tweet.created_at)}</p>
           <aside>
             <button>🚩</button> 
             <button>🌀</button>  
@@ -75,7 +93,7 @@ $(document).ready(function () {
               </header>
               <div>${data[0].content.text}</div>
               <footer>
-                <p>${Math.floor((Date.now() - data[0].created_at) / 1000 / 60 / 60 / 24)} days ago</p>
+                <p>${getTimeSincePost(data[0].created_at)}</p>
                 <aside>
                   <button>🚩</button> 
                   <button>🌀</button>  
