@@ -10,15 +10,19 @@ nav {
   left: 0;
 }
 
-nav span {
+nav > span {
   font-family: 'Bungee', sans-serif;
   font-size: 36px;
 }
 
-nav div {
+nav aside {
   float: right;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 22px;
+}
+
+nav div {
+  float: right;
 }
 
 .arrow {
