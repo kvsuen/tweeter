@@ -3,6 +3,10 @@ article.tweet {
   margin: 2em 0em;
 }
 
+article.tweet:hover {
+  box-shadow: 8px 8px #c8cee4;
+}
+
 article.tweet header {
   height: 5em;
   padding: 1em;
@@ -24,6 +28,11 @@ article.tweet header aside {
   color: #c8cee4;
   position: relative;
   top: 0em;
+  display: none;
+}
+
+article.tweet:hover header aside{
+  display: block
 }
 
 article.tweet section {
@@ -50,4 +59,9 @@ article.tweet footer aside {
   position: relative;
   bottom: 1.5em;
   padding-right: 0.75em;
+}
+
+article.tweet button {
+  border: none;
+  background-color: #f4f1ec;
 }
