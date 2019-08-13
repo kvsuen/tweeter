@@ -1,0 +1,53 @@
+article.tweet {
+  border: 4px solid #545149;
+  margin: 2em 0em;
+}
+
+article.tweet header {
+  height: 5em;
+  padding: 1em;
+}
+
+article.tweet img {
+  width: 3em; 
+  height: 3em;
+}
+
+article.tweet span {
+  font-weight: lighter;
+  position: relative;
+  bottom: 1em;
+}
+
+article.tweet header aside {
+  float: right;
+  color: #c8cee4;
+  position: relative;
+  top: 0em;
+}
+
+article.tweet section {
+  width: 95%;
+  margin: auto;
+  padding-top: 0.5em;
+  padding-bottom: 1.5em;
+}
+
+article.tweet footer {
+  width: 98%;
+  margin: auto;
+  border-top: 4px solid #545149;
+}
+
+article.tweet footer p {
+  width: 97%;
+  font-size: 16px;
+  margin: 0.75em auto;
+}
+
+article.tweet footer aside {
+  float: right;
+  position: relative;
+  bottom: 1.5em;
+  padding-right: 0.75em;
+}
