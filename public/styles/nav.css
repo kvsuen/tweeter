@@ -19,6 +19,7 @@ nav aside {
   float: right;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 22px;
+  cursor: pointer;
 }
 
 nav div {
@@ -39,23 +40,23 @@ nav div {
   border-right: 2.5px solid #84CEEB;
   transform: rotate(45deg);
   margin: 0px;
-  animation: animate 2s infinite;
+  animation: arrow-drop 2s infinite;
 }
 
 .arrow span:nth-child(2) {
   animation-delay: -0.2s;
 }
 
-@keyframes animate {
+@keyframes arrow-drop {
   0%{
-      opacity: 0;
-      transform: rotate(45deg) translate(-7px,-7px);
+    opacity: 0;
+    transform: rotate(45deg) translate(-7px,-7px);
   }
   50%{
-      opacity: 1;
+    opacity: 1;
   }
   100%{
-      opacity: 0;
-      transform: rotate(45deg) translate(0px,0px);
+    opacity: 0;
+    transform: rotate(45deg) translate(0px,0px);
   }
 }
