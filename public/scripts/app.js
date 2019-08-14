@@ -23,9 +23,10 @@ const getTimeSincePost = function(initialTime) {
 
 $(document).ready(function () {
   const renderTweets = function(tweets) {
+    const container = $('#tweets-container');
     for (const tweet of tweets) {
       let $tweet = createTweetElement(tweet);
-      $("#tweets-container").append($tweet);
+      container.append($tweet);
     }
   };
   
