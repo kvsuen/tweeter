@@ -3,7 +3,7 @@
   display: none;
 }
 
-.new-tweet textarea{
+.new-tweet .text-input{
   background-color: #f4f1ec;
   color: #545149;
   width: 100%;
@@ -13,14 +13,16 @@
   outline: 0;
 }
 
-.new-tweet textarea::-webkit-input-placeholder {
+.new-tweet textarea::-webkit-input-placeholder,
+.new-tweet textarea::-moz-placeholder,
+.new-tweet textarea:-moz-placeholder {
   color: #545149;
   opacity: 1;
   font-size: 24px;
   font-weight: 700;
   }
 
-.new-tweet span {
+.new-tweet .counter {
   float: right;
   font-family: 'Bungee', sans-serif;
 }

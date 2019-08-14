@@ -1,7 +1,7 @@
 nav {
   position: fixed;
   height: 100px;
-  z-index: 9999;
+  z-index: 10;
   background-color: #4056A1;
   width: 100%;
   color: #FFFFFF;
@@ -10,34 +10,36 @@ nav {
   left: 0;
 }
 
-nav > span {
+nav .logo {
   font-family: 'Bungee', sans-serif;
   font-size: 36px;
+  margin: 0;
+  display: inline-block;
 }
 
-nav aside {
+nav .write-tweet-toggle {
   float: right;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 22px;
   cursor: pointer;
+}
+
+nav .write-tweet-toggle p {
   font-weight: lighter;
+  margin: 0;
 }
 
-nav aside > span {
-  font-weight: bold;
+nav .write-tweet-toggle b {
+  font-weight: 700;
 }
 
-nav div {
-  float: right;
-}
-
-.arrow {
+nav .write-tweet-toggle .arrow {
   position: relative;
-  top: 1.45em;
-  right: 50%;
+  left: 50%;
+  top: 0.35em;
 }
 
-.arrow span {
+nav .write-tweet-toggle .arrow span {
   display: block;
   width: 10px;
   height: 10px;
@@ -48,7 +50,7 @@ nav div {
   animation: arrow-drop 2s infinite;
 }
 
-.arrow span:nth-child(2) {
+nav .write-tweet-toggle .arrow span:nth-child(2) {
   animation-delay: -0.2s;
 }
 

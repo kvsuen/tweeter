@@ -33,18 +33,20 @@ $(document).ready(function () {
   const createTweetElement = function(tweet) {
     const markup = `
         <header>
-          <img src=${tweet.user.avatars}>
-          <span>${tweet.user.name}</span>
-          <aside>${tweet.user.handle}</aside>
+          <img class="avatar" src=${tweet.user.avatars}>
+          <p class="user-name">${tweet.user.name}</p>
+          <h5 class="handle">${tweet.user.handle}</h5>
         </header>
-        <div>${tweet.content.text}</div>
+        <div class="tweet-body">
+          <p>${tweet.content.text}</p>
+        </div>
         <footer>
-          <p>${getTimeSincePost(tweet.created_at)}</p>
-          <aside>
+          <p class="date">${getTimeSincePost(tweet.created_at)}</p>
+          <div class="tweet-user-options">
             <button>🚩</button> 
             <button>🌀</button>  
             <button>❤</button>
-          </aside>
+          </div>
         </footer>
     `;
     
@@ -68,7 +70,7 @@ $(document).ready(function () {
     
     //server expects query string
     const form = $(this).children('form');
-    const formData = form.serialize;
+    const formData = form.serialize();
 
     const safeFormData = {};
     $.each(form.serializeArray(), function() {
@@ -105,18 +107,20 @@ $(document).ready(function () {
               $("#tweets-container").prepend($('<article>').addClass('tweet').html(
                 `
                 <header>
-                  <img src=${data[0].user.avatars}>
-                  <span>${data[0].user.name}</span>
-                  <aside>${data[0].user.handle}</aside>
+                  <img class="avatar" src=${data[0].user.avatars}>
+                  <p class="user-name">${data[0].user.name}</p>
+                  <h5 class="handle">${data[0].user.handle}</h5>
                 </header>
-                <div>${data[0].content.text}</div>
+                <div class="tweet-body">
+                  <p>${data[0].content.text}</p>
+                </div>
                 <footer>
-                  <p>${getTimeSincePost(data[0].created_at)}</p>
-                  <aside>
+                  <p class="date">${getTimeSincePost(data[0].created_at)}</p>
+                  <div class="tweet-user-options">
                     <button>🚩</button> 
                     <button>🌀</button>  
                     <button>❤</button>
-                  </aside>
+                  </div>
                 </footer>
                 `
               ));
@@ -125,7 +129,7 @@ $(document).ready(function () {
     }
   });
 
-  $('nav aside').click(function() {
+  $('nav .write-tweet-toggle').click(function() {
     $('.new-tweet').slideToggle(400, function() {
       $('.new-tweet').find('textarea').focus();
     });

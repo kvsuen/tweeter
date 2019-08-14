@@ -28,16 +28,18 @@
 
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
-      <aside>
-        <span>Write</span> a new tweet
+      <h1 class="logo">tweeter</h1>
+      <div class="write-tweet-toggle">
+        <p><b>Write </b>a new tweet</p>
+        <!-- animated drop down arrow -->
         <div class="arrow">
           <span></span>
           <span></span>
         </div>
-      </aside>
+      </div>
     </nav>
 
+    <!-- Header for user avatar & name -->
     <header>
       <div>
           <img src="/images/profile-hex.png"> 
@@ -53,11 +55,12 @@
       <section class="new-tweet">
         <form action="/tweets" method="POST">
           <textarea class="text-input" name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet!">
+          <input type="submit" value="Tweet!"/>
           <span class="counter">140</span>
         </form>
       </section>
       
+      <!-- Container for tweets (rendered with jquery) -->
       <section id="tweets-container">
       </section>
         
