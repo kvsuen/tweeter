@@ -25,17 +25,15 @@ const createTweetElement = function(tweet) {
       <footer>
         <p class="date">${getTimeSincePost(tweet.created_at)}</p>
         <div class="tweet-user-options">
-          <button><img src="/images/flag.png" alt="User Avatar" title="User Avatar"> </button> 
-          <button><img src="/images/retweet.png" alt="User Avatar" title="User Avatar"> </button>  
-          <button><img src="/images/rose.png" alt="User Avatar" title="User Avatar"> </button>
+          <button><img src="/images/flag.png" alt="Flag Tweet" title="Flag Tweet"> </button> 
+          <button><img src="/images/retweet.png" alt="Retweet" title="Retweet"> </button>  
+          <button><img src="/images/rose.png" alt="Like!" title="Like!"> </button>
         </div>
       </footer>
   `;
   
   return $('<article>').addClass('tweet').html(markup);
 };
-
-
 
 const loadTweets = function() {
   $.ajax({
