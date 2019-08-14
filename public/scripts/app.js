@@ -77,7 +77,8 @@ $(document).ready(function () {
         .replace(/"/g, '&quot;')
         .replace(/'/g, '&#39;')
         .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;');
+        .replace(/>/g, '&gt;')
+        .replace(/\//g, '&#x2F');
     });
 
     if (formData.length === 5) {
