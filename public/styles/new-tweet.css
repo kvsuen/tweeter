@@ -33,6 +33,19 @@
   font-size: 20px;
 }
 
+.new-tweet .successful-tweet {
+  margin: 1em 0;
+  display: none;
+}
+
+.new-tweet .successful-tweet p{
+  padding: 0.25em 1em;
+  color: #4F8A10;
+  background-color: #DFF2BF;
+  margin: 0;
+  font-size: 20px;
+}
+
 .new-tweet .error-no-msg,
 .new-tweet .error-excess-msg {
   margin: 1em 0;

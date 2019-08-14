@@ -86,6 +86,9 @@ $(document).ready(function () {
         data: safeFormData,
       })
         .success(function() {
+          $('.successful-tweet').fadeIn(400, function() {
+            $('.successful-tweet').delay(2000).fadeOut(400);
+          });
           $('.new-tweet').find('.text-input').val('');
           $('.new-tweet').find('.counter').text(140);
           // update page when using posts tweet
