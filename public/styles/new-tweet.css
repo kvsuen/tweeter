@@ -13,14 +13,12 @@
   outline: 0;
 }
 
-.new-tweet textarea::-webkit-input-placeholder,
-.new-tweet textarea::-moz-placeholder,
-.new-tweet textarea:-moz-placeholder {
+.new-tweet textarea::-webkit-input-placeholder {
   color: #545149;
   opacity: 1;
   font-size: 24px;
   font-weight: 700;
-  }
+}
 
 .new-tweet .counter {
   float: right;
@@ -32,5 +30,21 @@
   border: none;
   color: #FFFFFF;
   font-family: 'Bungee', sans-serif;
+  font-size: 20px;
+}
+
+.new-tweet .error-no-msg,
+.new-tweet .error-excess-msg {
+  margin: 1em 0;
+  display: none;
+}
+
+.new-tweet .error-no-msg p,
+.new-tweet .error-excess-msg p{
+  padding: 0.25em 0.5em;
+  color: #D8000C;
+  background-color: #FFD2D2;
+  margin: 0;
+  font-style: italic;
   font-size: 20px;
 }
