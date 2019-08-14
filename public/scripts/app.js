@@ -64,9 +64,20 @@ $(document).ready(function () {
 
   $('.new-tweet').submit(function(event) {
     event.preventDefault();
-
+    
     //server expects query string
-    const formData = $(this).children('form').serialize();
+    const form = $(this).children('form');
+    const formData = form.serialize;
+
+    const safeFormData = {};
+    $.each(form.serializeArray(), function() {
+      safeFormData[this.name] = this.value
+        .replace(/&/g, '&amp;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+    });
 
     if (formData.length === 5) {
       alert('Empty tweet. Please enter a message!');
@@ -74,9 +85,9 @@ $(document).ready(function () {
       alert('Tweet is too long!');
     } else {
       $.ajax({
-        type: 'POST', 
-        url: '/tweets', 
-        data: formData,
+        type: 'POST',
+        url: '/tweets',
+        data: safeFormData,
       })
         .success(function() {
           $('.new-tweet').find('textarea').val('');
