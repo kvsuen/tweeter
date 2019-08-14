@@ -67,3 +67,17 @@ nav .write-tweet-toggle .arrow span:nth-child(2) {
     transform: rotate(45deg) translate(0px,0px);
   }
 }
+
+.back-to-top {
+  position: fixed;
+  right: 8%;
+  bottom: 10%;
+  z-index: 10;
+  display: none;
+}
+
+.back-to-top img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}

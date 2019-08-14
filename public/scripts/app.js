@@ -108,4 +108,22 @@ $(document).ready(function () {
     });
   });
 
+  $('.back-to-top').click(function() {
+    window.scrollTo(0, 0);
+    $('.new-tweet').slideDown(400, function() {
+      $('.new-tweet').find('.text-input').focus();
+
+    });
+  });
+
+  $(window).scroll(function() {
+    if ($('.user-header')[0].getBoundingClientRect().bottom >= 0) {
+      $('.back-to-top').hide();
+      $('.write-tweet-toggle').show();
+    }
+    if ($('.user-header')[0].getBoundingClientRect().bottom <= 0) {
+      $('.back-to-top').show();
+      $('.write-tweet-toggle').hide();
+    }
+  });
 });
