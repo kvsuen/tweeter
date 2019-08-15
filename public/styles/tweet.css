@@ -4,7 +4,7 @@ article.tweet {
 }
 
 article.tweet:hover {
-  box-shadow: 5px 5px #c8cee4;
+  box-shadow: 5px 5px #84CEEB;
 }
 
 article.tweet header {
@@ -27,7 +27,7 @@ article.tweet .user-name {
 
 article.tweet .handle {
   float: right;
-  color: #c8cee4;
+  color: #84CEEB;
   display: none;
   margin-top: 0;
 }
