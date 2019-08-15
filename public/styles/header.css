@@ -12,3 +12,16 @@ body > header {
 body > header span.light {
   font-weight: lighter;
 }
+
+@media only screen and (min-width: 1024px) {
+ body > header {
+   width: 50%;
+   float: left;
+   position: fixed;
+   height: 100vh;
+ }
+
+ body > header img {
+   margin-top: 50px;
+ }
+}

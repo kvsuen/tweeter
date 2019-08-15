@@ -81,3 +81,9 @@ nav .write-tweet-toggle .arrow span:nth-child(2) {
   height: 50px;
   cursor: pointer;
 }
+
+@media only screen and (min-width: 1024px) {
+  .back-to-top {
+    right: 4%
+  }
+ }
