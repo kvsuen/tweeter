@@ -4,13 +4,16 @@ Tweeter is a simple, single-page Twitter clone built using HTML, CSS, JS, jQuery
 
 ## Final Product
 This is the desktop version of the app:
-!["Desktop version of the single-page app"](./docs/desktop.png)
+
+!["Desktop version of the single-page app"](https://github.com/kvsuen/tweeter/raw/master/docs/desktop.png)
 
 This is the mobile version of the app:
-!["Mobile version of the single-page app"](./docs/mobile.png)
+
+!["Mobile version of the single-page app"](https://github.com/kvsuen/tweeter/raw/master/docs/mobile.png)
 
 This is the with the 'Write new tweet' box toggled on:
-!["Mobile version of the single-page app with toggled write new tweet"](./docs/mobile-toggle.png)
+
+!["Mobile version of the single-page app with toggled write new tweet"](https://github.com/kvsuen/tweeter/raw/master/docs/mobile-toggle.png)
 
 
 ## Getting Started
