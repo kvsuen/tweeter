@@ -1,0 +1,75 @@
+@import 'theme';
+
+article.tweet {
+  border: 2px solid $body-txt-color;
+  margin: 2em 0em;
+
+  header {
+    height: 5em;
+    padding: 1em;
+  }
+
+  .avatar {
+    width: 3em; 
+    height: 3em;
+    display: inline-block;
+  }
+
+  .user-name {
+    font-weight: lighter;
+    position: relative;
+    bottom: 1em;
+    display: inline-block;
+  }
+
+  .handle {
+    float: right;
+    color: $accent-color;
+    display: none;
+    margin-top: 0;
+  }
+
+  .tweet-body {
+    width: 95%;
+    margin: auto;
+    font-size: 22px;
+    word-break: break-word;
+  }
+
+  footer {
+    width: 98%;
+    margin: auto;
+    border-top: 2.5px solid $body-txt-color;
+  }
+
+  .date {
+    width: 97%;
+    font-size: 16px;
+    margin: 0.75em auto;
+  }
+
+  .tweet-user-options {
+    float: right;
+    position: relative;
+    bottom: 1.5em;
+    padding-right: 0.75em;
+  }
+
+  .tweet-user-options button {
+    border: none;
+    background-color: $body-bg-color;
+  }
+
+  .tweet-user-options img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+article.tweet:hover {
+  box-shadow: 5px 5px $accent-color;
+}
+
+article.tweet:hover .handle {
+  display: block
+}

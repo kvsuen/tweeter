@@ -1,0 +1,64 @@
+@import 'theme';
+
+.new-tweet {
+  margin-top: 1em;
+  display: none;
+
+  .text-input {
+    background-color: $body-bg-color;
+    color: $body-txt-color;
+    width: 100%;
+    border: none;
+    border-bottom: 4px solid $body-txt-color;
+    resize: none;
+    outline: 0;
+    overflow: hidden;
+  }
+
+  textarea::-webkit-input-placeholder {
+    color: $body-txt-color;
+    opacity: 1;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .counter {
+    float: right;
+    font-family: $title-font;
+  }
+
+  input {
+    background-color: $nav-bg-color;
+    border: none;
+    color: $header-txt-color;
+    font-family: $title-font;
+    font-size: 20px;
+  }
+
+  .successful-tweet {
+    margin: 1em 0;
+    display: none;
+  }
+
+  .successful-tweet p{
+    padding: 0.25em 1em;
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .error-no-msg, .error-excess-msg {
+    margin: 1em 0;
+    display: none;
+  }
+
+  .error-no-msg p, .error-excess-msg p{
+    padding: 0.25em 0.5em;
+    color: #D8000C;
+    background-color: #FFD2D2;
+    margin: 0;
+    font-style: italic;
+    font-size: 20px;
+  }
+}

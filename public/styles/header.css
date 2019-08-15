@@ -3,25 +3,25 @@ body > header {
   text-align: center;
   width: 100%;
   margin: auto;
-  background-color: rgb(123, 208, 216);
+  background-color: #7bd0d8;
   background-image: url("https://www.transparenttextures.com/patterns/exclusive-paper.png");
   color: #ffffff;
   margin-top: 100px;
 }
-
 body > header span.light {
   font-weight: lighter;
 }
 
 @media only screen and (min-width: 1024px) {
- body > header {
-   width: 50%;
-   float: left;
-   position: fixed;
-   height: 100vh;
- }
-
- body > header img {
-   margin-top: 50px;
- }
+  body > header {
+    width: 50%;
+    float: left;
+    position: fixed;
+    height: 100vh;
+  }
+  body > header img {
+    margin-top: 50px;
+  }
 }
+
+/*# sourceMappingURL=header.css.map */

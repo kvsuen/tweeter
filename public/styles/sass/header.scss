@@ -1,0 +1,33 @@
+@import 'theme';
+
+body {
+  > header {
+      height: 360px;
+      text-align: center;
+      width: 100%;
+      margin: auto;
+      background-color: $header-bg-color;
+      background-image: url("https://www.transparenttextures.com/patterns/exclusive-paper.png");
+      color: $header-txt-color;
+      margin-top: 100px;
+  }
+
+  > header span.light {
+      font-weight: lighter;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    > header {
+        width: 50%;
+        float: left;
+        position: fixed;
+        height: 100vh;
+    }
+
+    > header img {
+      margin-top: 50px;
+    }
+  }
+ }

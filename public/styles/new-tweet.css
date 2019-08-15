@@ -2,8 +2,7 @@
   margin-top: 1em;
   display: none;
 }
-
-.new-tweet .text-input{
+.new-tweet .text-input {
   background-color: #f4f1ec;
   color: #545149;
   width: 100%;
@@ -13,48 +12,39 @@
   outline: 0;
   overflow: hidden;
 }
-
 .new-tweet textarea::-webkit-input-placeholder {
   color: #545149;
   opacity: 1;
   font-size: 24px;
   font-weight: 700;
 }
-
 .new-tweet .counter {
   float: right;
-  font-family: 'Bungee', sans-serif;
+  font-family: "Bungee", sans-serif;
 }
-
 .new-tweet input {
   background-color: #4056A1;
   border: none;
-  color: #FFFFFF;
-  font-family: 'Bungee', sans-serif;
+  color: #ffffff;
+  font-family: "Bungee", sans-serif;
   font-size: 20px;
 }
-
 .new-tweet .successful-tweet {
   margin: 1em 0;
   display: none;
 }
-
-.new-tweet .successful-tweet p{
+.new-tweet .successful-tweet p {
   padding: 0.25em 1em;
   color: #4F8A10;
   background-color: #DFF2BF;
   margin: 0;
   font-size: 20px;
 }
-
-.new-tweet .error-no-msg,
-.new-tweet .error-excess-msg {
+.new-tweet .error-no-msg, .new-tweet .error-excess-msg {
   margin: 1em 0;
   display: none;
 }
-
-.new-tweet .error-no-msg p,
-.new-tweet .error-excess-msg p{
+.new-tweet .error-no-msg p, .new-tweet .error-excess-msg p {
   padding: 0.25em 0.5em;
   color: #D8000C;
   background-color: #FFD2D2;
@@ -62,3 +52,5 @@
   font-style: italic;
   font-size: 20px;
 }
+
+/*# sourceMappingURL=new-tweet.css.map */

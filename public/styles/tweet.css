@@ -2,72 +2,64 @@ article.tweet {
   border: 2px solid #545149;
   margin: 2em 0em;
 }
-
-article.tweet:hover {
-  box-shadow: 5px 5px #84CEEB;
-}
-
 article.tweet header {
   height: 5em;
   padding: 1em;
 }
-
 article.tweet .avatar {
-  width: 3em; 
+  width: 3em;
   height: 3em;
   display: inline-block;
 }
-
 article.tweet .user-name {
   font-weight: lighter;
   position: relative;
   bottom: 1em;
   display: inline-block;
 }
-
 article.tweet .handle {
   float: right;
   color: #84CEEB;
   display: none;
   margin-top: 0;
 }
-
-article.tweet:hover .handle{
-  display: block
-}
-
 article.tweet .tweet-body {
   width: 95%;
   margin: auto;
   font-size: 22px;
   word-break: break-word;
 }
-
 article.tweet footer {
   width: 98%;
   margin: auto;
   border-top: 2.5px solid #545149;
 }
-
 article.tweet .date {
   width: 97%;
   font-size: 16px;
   margin: 0.75em auto;
 }
-
 article.tweet .tweet-user-options {
   float: right;
   position: relative;
   bottom: 1.5em;
   padding-right: 0.75em;
 }
-
 article.tweet .tweet-user-options button {
   border: none;
   background-color: #f4f1ec;
 }
-
 article.tweet .tweet-user-options img {
   width: 20px;
   height: 20px;
 }
+
+article.tweet:hover {
+  box-shadow: 5px 5px #84CEEB;
+}
+
+article.tweet:hover .handle {
+  display: block;
+}
+
+/*# sourceMappingURL=tweet.css.map */
