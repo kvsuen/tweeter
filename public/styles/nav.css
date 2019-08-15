@@ -67,6 +67,7 @@ nav .write-tweet-toggle .arrow span:nth-child(2) {
   bottom: 10%;
   z-index: 10;
   display: none;
+  animation: bounce 2s infinite;
 }
 .back-to-top img {
   width: 50px;
@@ -74,6 +75,14 @@ nav .write-tweet-toggle .arrow span:nth-child(2) {
   cursor: pointer;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(0px, -10px);
+  }
+}
 @media only screen and (min-width: 1024px) {
   .back-to-top {
     right: 4%;
