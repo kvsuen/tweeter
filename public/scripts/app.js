@@ -91,6 +91,7 @@ $(document).ready(function () {
           });
           $('.new-tweet').find('.text-input').val('');
           $('.new-tweet').find('.counter').text(140);
+          $('.text-input').height(58);
           // update page when using posts tweet
           // do another ajax request to get updated tweet data and prepend new tweet to the page
           // this is a smoother effect compared to $('article').remove() and then loadTweets()
