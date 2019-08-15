@@ -121,12 +121,12 @@ $(document).ready(function () {
 
   $(window).scroll(function() {
     if ($('.user-header')[0].getBoundingClientRect().bottom >= 0) {
-      $('.back-to-top').hide();
-      $('.write-tweet-toggle').show();
+      $('.back-to-top').fadeOut(400);
+      $('.write-tweet-toggle').fadeIn(400);
     }
     if ($('.user-header')[0].getBoundingClientRect().bottom <= 0) {
-      $('.back-to-top').show();
-      $('.write-tweet-toggle').hide();
+      $('.back-to-top').fadeIn(400);
+      $('.write-tweet-toggle').fadeOut(400);
     }
   });
 });
