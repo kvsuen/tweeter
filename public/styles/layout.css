@@ -29,9 +29,9 @@ body main.container {
 
 @media only screen and (min-width: 1024px) {
   body main.container {
-    width: 45%;
+    width: 45vw;
     float: right;
-    margin-right: 1em;
+    margin-right: 2.5vw;
     margin-top: 100px;
   }
  }

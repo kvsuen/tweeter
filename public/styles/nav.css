@@ -22,6 +22,7 @@ nav .write-tweet-toggle {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 22px;
   cursor: pointer;
+  margin-right: 1vw;
 }
 
 nav .write-tweet-toggle p {
